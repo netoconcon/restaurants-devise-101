@@ -1,2 +1,15 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="home-banner">
+  <h1>Restaurantes</h1>
+  <p>
+    <span id="banner-typed-text"></span>
+  </p>
+  <%= link_to "Ver Restaurantes", restaurants_path, class: "btn btn-primary" %>
+</div>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <%= "Lorem ipsum dolor sit amet, consectetur adipisicing elit " * 100 %>
+    </div>
+  </div>
+</div>
