@@ -1,5 +1,24 @@
 <div class="container">
   <h1><%= @restaurant.name.capitalize %></h1>
+
+
+  <% if @restaurant.photos.attached? %>
+    <%#= cl_image_tag @restaurant.photo.key, height: 300, width: 400, crop: :fit %>
+
+<!--     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%#= cl_image_path @restaurant.photo.key, height: 300, crop: :fill %>')">
+    </div> -->
+
+    <% @restaurant.photos.each do |photo| %>
+      <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fit %>
+    <% end %>
+
+  <% end %>
+
+
+
+
+
+
   <p><%= @restaurant.address  %></p>
   <%= link_to "voltar", restaurants_path %>
 </div>
